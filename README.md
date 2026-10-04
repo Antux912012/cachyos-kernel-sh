@@ -32,6 +32,7 @@ While the GUI looks modern, **kernel management is fundamentally a command-line 
 3. **Dual Build Modes:**
    - **Host Mode:** Multi-threaded native compilation (`make -j$(nproc) bindeb-pkg`).
    - **Container Mode (`--container`):** Clean, isolated compilation inside a `debian:bookworm-slim` container using **Podman** or **Docker**.
+   - *Note: Kernel compilation is an intensive workload and can take a while (typically 15 to 45+ minutes) depending on your system's processing power, CPU core count, and cooling.*
 4. **Automated Debian Kernel Tweaks:**
    - Disables Debian trusted keys (`SYSTEM_TRUSTED_KEYS`) to prevent certificate build failures.
    - Disables excessive debug info (`CONFIG_DEBUG_INFO_NONE=y`) to prevent massive 40GB+ debug packages and disk exhaustion.
