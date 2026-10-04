@@ -1,0 +1,8 @@
+# Ignore build artifacts and cache
+*.tar.gz
+*.part
+*.deb
+*.buildinfo
+*.changes
+*.config
+.building
